@@ -168,3 +168,15 @@ export const SYMBOL_LIST = [
   "ZMW",
   "ZWL",
 ];
+
+export const debounceFunction = function (fn, delay) {
+  let timer;
+  return function () {
+    let context = this,
+      args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fn.apply(context, args);
+    }, delay);
+  };
+};
