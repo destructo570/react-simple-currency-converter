@@ -6,4 +6,4 @@
 # TechStack
 - React
 - Javascript
-- Featch API
+- Fetch API
